@@ -171,7 +171,7 @@ jobs:
         git config --global user.name "FIRMWARE"
         git config --global user.email "sh3d0ww01f@gmail.com"
         cd ${{ env.FIRMWARE }}
-        git add .
+        git add --all
         git commit -m "UPDATE"
     - name: Push changes
       uses: ad-m/github-push-action@master
