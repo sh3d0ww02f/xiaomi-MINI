@@ -137,6 +137,10 @@ jobs:
       with:
         name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
+    - name: test
+      run: |
+          cd openwrt/bin/targets/*/*
+          ls -al
 
     - name: Upload firmware to cowtransfer
       id: cowtransfer
